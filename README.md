@@ -1,2 +1,29 @@
 # QuestionApps
- 1. Storing Different Types of Questions (POST Method)  Endpoint: POST /api/Question/CreateQuestion Implementation: Accepts a QuestionDtos object. Maps it to a Question entity using AutoMapper. Saves the entity using QuestionService.AddQuestion. Returns the created question's ID and data. 2. Editing a Question (PUT Method)  Endpoint: PUT /api/Question/EditQuestion/{id} Implementation: Accepts a question ID and QuestionDtos object. Fetches the existing question with QuestionService.GetQuestionById. Updates the question's properties and saves the changes with QuestionService.UpdateQuestion. Screen 2: Candidate Applying for the Program 1. Providing a GET Endpoint for Rendering Questions  Endpoint: GET /api/Question/GetAllQuestions Implementation: Fetches all questions using QuestionService.GetAllQuestions. Maps them to QuestionDtos objects and returns the list. 2. Providing a POST Endpoint for Submitting Applications  Endpoint: POST /api/Question/SubmitResponses Implementation: Accepts a list of ResponseDtos objects. Validates the responses list. Checks if all question IDs exist. Maps valid responses to Response entities and saves them with QuestionService.AddResponses. Returns the saved responses as ResponseDtos objects.
+ndpoint: POST /api/Question/CreateQuestion
+Implementation:
+Accepts QuestionDtos.
+Maps to Question entity with AutoMapper.
+Saves entity via QuestionService.AddQuestion.
+Returns created question's ID and data.
+
+Endpoint: PUT /api/Question/EditQuestion/{id}
+Implementation:
+Accepts question ID and QuestionDtos.
+Fetches existing question with QuestionService.GetQuestionById.
+Updates properties and saves changes with QuestionService.UpdateQuestion.
+
+Endpoint: GET /api/Question/GetAllQuestions
+Implementation:
+Fetches all questions with QuestionService.GetAllQuestions.
+Maps to QuestionDtos and returns list.
+
+Endpoint: POST /api/Question/SubmitResponses
+Implementation:
+Accepts ResponseDtos list.
+Validates responses.
+Checks if question IDs exist.
+Maps to Response entities and saves with QuestionService.AddResponses.
+Returns saved responses as ResponseDtos.
+
+Online Database: Hosted on Render.
+Connection String: Configured in appsettings.json for remote PostgreSQL database access.
