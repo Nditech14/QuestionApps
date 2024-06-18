@@ -1,5 +1,5 @@
 # QuestionApps
-ndpoint: POST /api/Question/CreateQuestion
+ POST /api/Question/CreateQuestion
 Implementation:
 Accepts QuestionDtos.
 Maps to Question entity with AutoMapper.
